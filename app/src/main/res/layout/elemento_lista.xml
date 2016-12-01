@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="fotografía"
+        />
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombres del contacto"
+        android:layout_toRightOf="@id/foto"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+    <TextView
+        android:id="@+id/ciclo_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre"
+        android:layout_toRightOf="@id/foto"
+        android:gravity="left"
+        android:text="telefono del contacto"/>
+
+
+
+</RelativeLayout>
