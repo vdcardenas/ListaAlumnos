@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 public class Fragment_Consulta extends Fragment {
 
+    static int FLAG_FRAGMENT=1;
     public Fragment_Consulta() {
     }
 

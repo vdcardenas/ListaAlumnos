@@ -2,6 +2,7 @@ package salesianas.listaalumnos;
 
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -148,9 +149,16 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void setTitle(int i) {
-        Fragment fragment = getFragmentManager().findFragmentByTag(dialogoSeleccion);
+        Fragment fragmentel = new Fragment_Consulta();
+
+        getFragmentManager().beginTransaction().replace(R.id.fragment_consulta,fragmentel).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
         alumno = VecAlumnos.getAlumno((int) id);
-        if (fragment != null) {
+
+
+
+
+
+     /*   if (fragment != null) {
             if (i == 0) {
                 Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + alumno.getTelef()));
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey, I'm using Agendex");
@@ -167,6 +175,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(Intent.createChooser(intent, "Selecciona la aplicaion"));
             }
 
-        }
+        }*/
     }
 }
